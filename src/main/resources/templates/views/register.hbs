@@ -1,0 +1,98 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <title>Register</title>
+  </head>
+
+  <body>
+
+{{!--  Navigation bar--}}
+<nav class="navbar navbar-default">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="/">Co-Mute</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href="/">Home</a></li>
+      <li><a href="/join">Join/Leave Car-pool</a></li>
+      <li class="active"><a href="/register">Register New Car-pool</a></li>
+      <li><a href="/profile">Profile</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+{{!--  Form --}}
+
+<form method="post" action="/register" >
+
+  <div class="form-row">
+
+{{!-- Origin --}}
+  <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Start from</label>
+      <input type="text" name="origin" class="form-control" id="inputCity">
+    </div>
+
+{{!-- Destination --}}
+ <div class="form-row">
+    <div class="form-group col-md-6">
+      <label for="inputCity">Destination </label>
+      <input type="text" name="destination" class="form-control" id="inputCity">
+    </div>
+
+{{!-- Departure--}}
+<div class="form-group col-md-2">
+      <label for="inputZip">Departure</label>
+      <input type="time" id="appt" name="departure" min="03:00" max="23:59" required>
+    </div>
+  </div>
+
+{{!-- Arrival--}}
+<div class="form-group col-md-2">
+      <label for="inputZip">Arrival</label>
+      <input type="time" id="appt" name="arrival" min="03:00" max="23:59" required>
+    </div>
+  </div>
+
+  {{!-- Number of seats --}}
+  <div class="form-group col-md-2">
+        <label for="inputZip">Number of seats</label>
+        <input type="number" id="quantity" name="quantity" min="1" max="15">
+      </div>
+    </div>
+
+
+  {{!--  Days available--}}
+  <div class="form-group col-md-2">
+        <label for="inputZip">Days available</label>
+        <input type="number" id="quantity" name="quantity_days" min="1" max="15">
+      </div>
+    </div>
+
+<div class="form-group col-md">
+  <label for="comment">Notes</label>
+  <textarea class="form-control" rows="5" name="notes" id="comment"></textarea>
+</div>
+
+
+  <button type="submit" class="btn btn-primary">Sign in</button>
+
+</form>
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  </body>
+</html>
